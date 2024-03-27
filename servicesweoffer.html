@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+
+
+
+		body {
+			padding: 0;
+			margin: 0;
+			font: Fredoka;
+		}
+		
+		.bbody {
+		
+		  font: 2em Fredoka;
+		  font-size: 35px;
+		  text-align: center;
+		  padding: 7px;
+		}
+		
+		.bbody2{
+		  font: 2em Fredoka;
+		  font-size: 25px;
+		  text-align: center;
+		  padding: 7px;
+		
+		}
+		
+		
+		
+		
+		
+		
+		.pictures{
+		
+			text-align: center;
+		}
+		
+		.heading
+		{
+			color: rgb(13, 27, 182);
+		  font-size: 35px;
+		  text-align: center;
+		  text-decoration: none;
+		  font: Fredoka;
+		  margin:o;
+		
+		  
+		
+		}
+		
+		.ending
+		{
+			text-align: center;
+			font: Fredoka;
+			font-size: 13px;
+		}
+		
+		.heading2{
+			color: rgb(13, 27, 182);
+		  font-size: 35px;
+		  text-align: center;
+		  text-decoration: none;
+		  font: Fredoka;
+		  margin:o;
+		
+		}
+		.container {
+			position: relative;
+			margin-top: 100px;
+		}
+		.container img {
+			display: block;
+			width: 100%;
+			
+		}
+		nav {
+			position: fixed;
+			z-index: 10;
+			left: 0;
+			right: 0;
+			top: 0;
+			font-family: 'Arial', sans-serif;
+			padding: 0 5%;
+			height: 120px;
+			background-color:rgb(230, 122, 221);
+			color: rgb(107, 36, 92);
+			font-size: 35px;
+		}
+		
+		.logo1{
+		
+			color: rgb(13, 20, 90);
+		}
+		nav .logo {
+			float: left;
+			width: 40%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			font-size: 24px;
+			color: rgb(13, 27, 182);
+		}
+		nav .links {
+			float: right;
+			padding: 0;
+			margin: 0;
+			width: 60%;
+			height: 100%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		nav .links li {
+			list-style: none;
+		}
+		nav .links a {
+			display: block;
+			padding: 1em;
+			font-size: 16px;
+			font-weight: bold;
+			color: rgb(13, 20, 90);
+			text-decoration: none;
+		}
+		#nav-toggle {
+			position: absolute;
+			top: -100px;
+		}
+		nav .icon-burger {
+			display: none;
+			position: absolute;
+			right: 5%;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		nav .icon-burger .line {
+			width: 30px;
+			height: 5px;
+			background-color: rgb(192, 192, 192);
+			margin: 5px;
+			border-radius: 3px;
+			transition: all .3s ease-in-out;
+		}
+		
+		@media screen and (max-width: 576px)
+		{ 
+		.container img {
+			display: block;
+			height: 44vh;
+			
+		}
+		.heading2{
+		
+			font-size: 25px;
+		}
+		
+		.bbody{
+			font-size: 18px;
+		}
+		
+		.bbody2{
+		  
+			font-size: 18px;
+		
+		}
+		
+		}
+		
+		
+		@media screen and (max-width: 768px) 
+		
+		
+		{
+		
+		
+			
+			nav .logo {
+				float: none;
+				width: auto;
+				justify-content: center;
+			}
+			nav .links {
+				float: none;
+				position: fixed;
+				z-index: 9;
+				left: 0;
+				right: 0;
+				top: 100px;
+				bottom: 100%;
+				width: auto;
+				height: auto;
+				flex-direction: column;
+				justify-content: space-evenly;
+				background-color: rgba(228, 65, 206, 0.8);
+				overflow: hidden;
+				box-sizing: border-box;
+				transition: all .5s ease-in-out;
+			}
+			nav .links a {
+				font-size: 20px;
+			}
+			nav :checked ~ .links {
+				bottom: 0;
+			}
+			nav .icon-burger {
+				display: block;
+			}
+			nav :checked ~ .icon-burger .line:nth-child(1) {
+				transform: translateY(10px) rotate(225deg);
+			}
+			nav :checked ~ .icon-burger .line:nth-child(3) {
+				transform: translateY(-10px) rotate(-225deg);
+			}
+			nav :checked ~ .icon-burger .line:nth-child(2) {
+				opacity: 0;
+			}
+			
+		}
+		
+		
+		@media screen and (max-width: 992x) 
+		{
+		  
+			nav .logo {
+				float: none;
+				width: auto;
+				justify-content: center;
+			}
+			nav .links {
+				float: none;
+				position: fixed;
+				z-index: 9;
+				left: 0;
+				right: 0;
+				top: 100px;
+				bottom: 100%;
+				width: auto;
+				height: auto;
+				flex-direction: column;
+				justify-content: space-evenly;
+				background-color: rgba(0,0,0,.8);
+				overflow: hidden;
+				box-sizing: border-box;
+				transition: all .5s ease-in-out;
+			}
+			nav .links a {
+				font-size: 20px;
+			}
+			nav :checked ~ .links {
+				bottom: 0;
+			}
+			nav .icon-burger {
+				display: block;
+			}
+			nav :checked ~ .icon-burger .line:nth-child(1) {
+				transform: translateY(10px) rotate(225deg);
+			}
+			nav :checked ~ .icon-burger .line:nth-child(3) {
+				transform: translateY(-10px) rotate(-225deg);
+			}
+			nav :checked ~ .icon-burger .line:nth-child(2) {
+				opacity: 0;
+			}
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				  </style>
+
+
+
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+	  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+	  
+	  <title>MEGA LAUREATE SCHOOLS</title>
+</head>
+<body>
+	<main> 
+
+
+<nav>
+<input id="nav-toggle" type="checkbox">
+<div class="logo"><h1><a class = "heading" href = "https://products-services.github.io/MegaLaureate/index.html"><b>MEGA<br>LAUREATE<br>SCHOOLS</b></a></h1></div>
+<ul class="links">
+	<li><a href="https://products-services.github.io/MegaLaureate/index.html">Home</a></li>
+		<li><a href="https://products-services.github.io/MegaLaureate/whyus.html">Why Us</a></li>
+		<li><a href="https://products-services.github.io/MegaLaureate/servicesweoffer.html">Services We Offer</a></li>
+		<li><a href = "https://products-services.github.io/MegaLaureate/meettheteam.html">Meet The Team</a></li>
+		<li><a href="https://products-services.github.io/MegaLaureate/contactus.html">Contact Us</a></li>
+		<li><a href="https://products-services.github.io/MegaLaureate/signup.html">Cbt Login</a></li>
+		<li><a href="https://schoolviewers.com/clavant/portal/">Report Card Login</a></li>
+
+	
+</ul>
+        <label for="nav-toggle" class="icon-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+    </nav>
+    
+
+
+
+    
+
+
+
+   
+	<p class = "heading2">
+		<br>
+		<br>
+	    <br>
+		
+	
+		<b><br><br>SERVICES WE OFFER<br><br></b></p>
+
+		<hr>
+
+
+    <div class = "pictures">	
+		<p class = "heading2"><b><br>CRECHE<br>4MONTHS - 2 YEARS</></p>
+	<img src="creche.jpg" width = 220px alt="The Propreietress">
+	</div>
+	
+	
+	
+	
+	<p class = "bbody2">
+	
+	Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi dignissimos recusandae quasi earum sint itaque, eaque distinctio similique, perspiciatis dolores, inventore labore dolorum iste commodi ut sed eveniet corrupti aliquid? Harum eos tenetur optio autem magnam, corrupti et, nihil temporibus quibusdam suscipit dolorem iusto laborum libero rem officiis placeat maxime voluptatem nisi. Iste voluptates quae consequuntur magni doloribus, quam modi et impedit nobis dolorem, reiciendis voluptate nam praesentium in quis animi earum minus maxime sit officia dolores mollitia? Deserunt omnis temporibus excepturi, possimus eligendi ex dolorem mollitia facere, a consequuntur dolor eos, quae atque. Minus doloribus voluptatum laboriosam nulla.</p>
+
+<br>
+<br>
+<hr>
+
+
+<div class = "pictures">
+   
+	<p class = "heading2">
+		<br>
+		
+		
+	
+		<b>RECEPTION<br>1 YEAR - 2 YEARS</b></p>
+	<img src="reception.png" width = 220px alt="The Propreietress">
+	</div>
+	
+	
+	
+	
+	<p class = "bbody2">
+	
+	Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi dignissimos recusandae quasi earum sint itaque, eaque distinctio similique, perspiciatis dolores, inventore labore dolorum iste commodi ut sed eveniet corrupti aliquid? Harum eos tenetur optio autem magnam, corrupti et, nihil temporibus quibusdam suscipit dolorem iusto laborum libero rem officiis placeat maxime voluptatem nisi. Iste voluptates quae consequuntur magni doloribus, quam modi et impedit nobis dolorem, reiciendis voluptate nam praesentium in quis animi earum minus maxime sit officia dolores mollitia? Deserunt omnis temporibus excepturi, possimus eligendi ex dolorem mollitia facere, a consequuntur dolor eos, quae atque. Minus doloribus voluptatum laboriosam nulla.</p>
+
+<br>
+<br>
+<hr>
+
+
+<div class = "pictures">
+   
+	<p class = "heading2">
+		<br>
+		
+		
+	
+		<b>NURSERY<br>2 YEAR - 3 YEARS</b></p>
+	<img src="nursery.jpg" width = 220px alt="The Propreietress">
+	</div>
+	
+	
+	
+	
+	<p class = "bbody2">
+	
+	Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi dignissimos recusandae quasi earum sint itaque, eaque distinctio similique, perspiciatis dolores, inventore labore dolorum iste commodi ut sed eveniet corrupti aliquid? Harum eos tenetur optio autem magnam, corrupti et, nihil temporibus quibusdam suscipit dolorem iusto laborum libero rem officiis placeat maxime voluptatem nisi. Iste voluptates quae consequuntur magni doloribus, quam modi et impedit nobis dolorem, reiciendis voluptate nam praesentium in quis animi earum minus maxime sit officia dolores mollitia? Deserunt omnis temporibus excepturi, possimus eligendi ex dolorem mollitia facere, a consequuntur dolor eos, quae atque. Minus doloribus voluptatum laboriosam nulla.</p>
+
+<br>
+<br>
+<hr>
+	
+	
+<div class = "pictures">
+   
+	<p class = "heading2">
+		<br>
+		
+		
+	
+		<b>KINDERGARTEN<br>4 YEAR - 6 YEARS</b></p>
+	<img src="primary.jpg" width = 220px alt="The Propreietress">
+	</div>
+	
+	
+	
+	
+	<p class = "bbody2">
+	
+	Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi dignissimos recusandae quasi earum sint itaque, eaque distinctio similique, perspiciatis dolores, inventore labore dolorum iste commodi ut sed eveniet corrupti aliquid? Harum eos tenetur optio autem magnam, corrupti et, nihil temporibus quibusdam suscipit dolorem iusto laborum libero rem officiis placeat maxime voluptatem nisi. Iste voluptates quae consequuntur magni doloribus, quam modi et impedit nobis dolorem, reiciendis voluptate nam praesentium in quis animi earum minus maxime sit officia dolores mollitia? Deserunt omnis temporibus excepturi, possimus eligendi ex dolorem mollitia facere, a consequuntur dolor eos, quae atque. Minus doloribus voluptatum laboriosam nulla.</p>
+
+<br>
+<br>
+<hr>
+
+<div class = "pictures">
+   
+	<p class = "heading2">
+		<br>
+		
+		
+	
+		<b>PRIMARY<br>6 YEAR - 11 YEARS</b></p>
+	<img src="kindergarten.jpg" width = 220px alt="The Propreietress">
+	</div>
+	
+	
+	
+	
+	<p class = "bbody2">
+	
+	Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi dignissimos recusandae quasi earum sint itaque, eaque distinctio similique, perspiciatis dolores, inventore labore dolorum iste commodi ut sed eveniet corrupti aliquid? Harum eos tenetur optio autem magnam, corrupti et, nihil temporibus quibusdam suscipit dolorem iusto laborum libero rem officiis placeat maxime voluptatem nisi. Iste voluptates quae consequuntur magni doloribus, quam modi et impedit nobis dolorem, reiciendis voluptate nam praesentium in quis animi earum minus maxime sit officia dolores mollitia? Deserunt omnis temporibus excepturi, possimus eligendi ex dolorem mollitia facere, a consequuntur dolor eos, quae atque. Minus doloribus voluptatum laboriosam nulla.</p>
+
+<br>
+<br>
+<hr>
+
+<div class = "pictures">
+   
+	<p class = "heading2">
+		<br>
+		
+		
+	
+		<b>SECONDARY<br>11 YEARS +</b></p>
+	<img src="secondary.png" width = 220px alt="The Propreietress">
+	</div>
+	
+	
+	
+	
+	<p class = "bbody2">
+	
+	Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia eligendi dignissimos recusandae quasi earum sint itaque, eaque distinctio similique, perspiciatis dolores, inventore labore dolorum iste commodi ut sed eveniet corrupti aliquid? Harum eos tenetur optio autem magnam, corrupti et, nihil temporibus quibusdam suscipit dolorem iusto laborum libero rem officiis placeat maxime voluptatem nisi. Iste voluptates quae consequuntur magni doloribus, quam modi et impedit nobis dolorem, reiciendis voluptate nam praesentium in quis animi earum minus maxime sit officia dolores mollitia? Deserunt omnis temporibus excepturi, possimus eligendi ex dolorem mollitia facere, a consequuntur dolor eos, quae atque. Minus doloribus voluptatum laboriosam nulla.</p>
+
+<br>
+<br>
+<hr>
+    
+</body>
+</html>
